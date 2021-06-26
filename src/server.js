@@ -8,6 +8,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('short'));
 app.use(express.json());
+app.use(config.api.prefix, routes);
 
 app.listen(config.port, (err) => {
   if (err) {
