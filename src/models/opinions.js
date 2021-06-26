@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Opinions = sequelize.define('Opinions', {
+  const Opinions = sequelize.define('opinions', {
     author: DataTypes.STRING,
     text: DataTypes.STRING,
     link: DataTypes.STRING,
