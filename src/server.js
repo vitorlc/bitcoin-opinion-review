@@ -1,14 +1,14 @@
-const express = require('express');
-const morgan = require('morgan');
-const config = require('./config');
+const express = require('express')
+const morgan = require('morgan')
+const config = require('./config')
 const routes = require('./routes')
 
-const app = express();
+const app = express()
 
-app.use(express.urlencoded({ extended: false }));
-app.use(morgan('short'));
-app.use(express.json());
-app.use(config.api.prefix, routes);
+app.use(express.urlencoded({ extended: false }))
+app.use(morgan('short'))
+app.use(express.json())
+app.use(config.api.prefix, routes)
 
 app.listen(config.port, (err) => {
   if (err) {
@@ -17,4 +17,4 @@ app.listen(config.port, (err) => {
     return
   }
   console.log(`Server listening on port: ${config.port}`)
-});
+})

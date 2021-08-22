@@ -1,6 +1,6 @@
-const db = require('../models');
-const Opinions = db.opinions;
-const vader = require('vader-sentiment');
+const db = require('../models')
+const Opinions = db.opinions
+const vader = require('vader-sentiment')
 
 const analyzeTextPolarity = (text) => {
   const intensity = vader.SentimentIntensityAnalyzer.polarity_scores(text)
@@ -40,7 +40,6 @@ const deleteOpinion = (id) => Opinions.destroy({
     id
   }
 })
-
 
 module.exports = {
   saveOpinion,

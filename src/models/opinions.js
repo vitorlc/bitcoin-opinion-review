@@ -5,10 +5,10 @@ module.exports = (sequelize, DataTypes) => {
     link: DataTypes.STRING,
     opinion: DataTypes.STRING,
     date: DataTypes.DATEONLY,
-    avg: DataTypes.INTEGER,
+    avg: DataTypes.INTEGER
   }, {
     tableName: 'opinions'
-  });
+  })
 
-  return Opinions;
+  return Opinions
 }
